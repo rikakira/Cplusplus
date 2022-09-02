@@ -1,0 +1,19 @@
+#include <iostream>
+#include<math.h>
+using namespace std;
+int main() {
+    int n, bit;
+    //Taking input of number we want to convert to bit
+    cin>>n;
+    int ans=0, i =0;
+    while(n!=0)
+    {
+        bit = n&1; //Storing the last digit of bit
+        ans = bit* pow(10,i) + ans; //Storing the answer
+        n = n>>1;
+        
+        i++;
+    }
+cout<< "Answer is "<<ans;
+    
+}
